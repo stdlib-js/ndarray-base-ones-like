@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,44 +16,45 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var emptyLike = require( '@stdlib/ndarray-base-empty-like' );
-var fill = require( '@stdlib/ndarray-base-fill' );
-
-
-// MAIN //
+import { ComplexLike } from '@stdlib/types/complex';
+import { typedndarray } from '@stdlib/types/ndarray';
 
 /**
-* Creates a ones-filled ndarray having the same shape and data type as a provided ndarray.
+* Creates a ones-filled array having the same shape and data type as a provided input ndarray.
 *
-* @param {ndarray} x - input array
-* @returns {ndarray} ndarray
+* @param x - input array
+* @returns ones-filled array
 *
 * @example
 * var getShape = require( '@stdlib/ndarray-shape' );
 * var getDType = require( '@stdlib/ndarray-dtype' );
 * var ones = require( '@stdlib/ndarray-base-ones' );
 *
-* var x = ones( 'float32', [ 2, 2 ], 'row-major' );
+* var x = ones( 'float64', [ 2, 2 ], 'row-major' );
 * // returns <ndarray>[ [ 1.0, 1.0 ], [ 1.0, 1.0 ] ]
+*
+* var sh = getShape( x );
+* // returns [ 2, 2 ]
+*
+* var dt = String( getDType( x ) );
+* // returns 'float64'
 *
 * var y = onesLike( x );
 * // returns <ndarray>[ [ 1.0, 1.0 ], [ 1.0, 1.0 ] ]
 *
-* var sh = getShape( y );
+* sh = getShape( y );
 * // returns [ 2, 2 ]
 *
-* var dt = String( getDType( y ) );
-* // returns 'float32'
+* dt = String( getDType( y ) );
+* // returns 'float64'
 */
-function onesLike( x ) {
-	return fill( emptyLike( x ), 1.0 );
-}
+declare function onesLike<T extends typedndarray<number | ComplexLike>>( x: T ): T;
 
 
 // EXPORTS //
 
-module.exports = onesLike;
+export = onesLike;
