@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-04-10)
+## Unreleased (2026-05-21)
 
 <section class="features">
 
@@ -44,6 +44,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`3ca7c21`](https://github.com/stdlib-js/stdlib/commit/3ca7c2179081a36fa279dbb1e12f8e81d811e997) - **docs:** propagate recent `ndarray/base` comment and note fixes to sibling packages [(#11762)](https://github.com/stdlib-js/stdlib/pull/11762) _(by Philipp Burckhardt)_
 -   [`762f410`](https://github.com/stdlib-js/stdlib/commit/762f410098b29afa3823ab1191553101db0dcead) - **fix:** correct grammar in ndarray type test comments [(#11154)](https://github.com/stdlib-js/stdlib/pull/11154) _(by Matt Van Horn)_
 -   [`d200536`](https://github.com/stdlib-js/stdlib/commit/d200536a79672d3a31022f894a63acdf08b79159) - **feat:** add `ndarray/base/ones-like` _(by Athan Reines)_
 
@@ -57,10 +58,11 @@ This release closes the following issue:
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Matt Van Horn
+-   Philipp Burckhardt
 
 </section>
 
